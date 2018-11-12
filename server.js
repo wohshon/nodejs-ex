@@ -73,6 +73,9 @@ var initDb = function(callback) {
   });
 };
 
+app.get('/health', function (req, res) {
+  res.render('health.html')
+});
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
